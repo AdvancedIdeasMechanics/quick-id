@@ -1,0 +1,42 @@
+{
+  "name": "advancedideasmechanics/quick-id",
+  "description": "PHP application to generate alphanumeric ids",
+  "type": "library",
+  "keywords": [
+    "matthewpallotta",
+    "advancedideasmechanics",
+    "quick-id",
+    "php",
+    "library"
+  ],
+  "authors": [
+    {
+      "name":"Matthew Pallotta",
+      "email": "matt@advanced.im",
+      "homepage": "https://advanced.im"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/advancedideasmechanics/quick-id/issues",
+    "email": "support@advanced.im",
+    "source": "https://github.com/advancedideasmechanics/quick-id"
+  },
+  "homepage": "https://www.advanced.im/quickid",
+  "license": "MIT",
+  "require": {
+    "php": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Advancedideasmechanics\\Quickid\\": "src/"
+    }
+  },
+  "scripts": {
+    "check": [
+      "@cs-check",
+      "@test"
+    ],
+    "cs-check": "phpcs",
+    "cs-fix": "phpcbf"
+  }
+}
