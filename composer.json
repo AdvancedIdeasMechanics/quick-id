@@ -31,6 +31,11 @@
       "Advancedideasmechanics\\Quickid\\": "src/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "Advancedideasmechanics\\Quickid\\": "tests/src"
+    }
+  },
   "scripts": {
     "check": [
       "@cs-check",
@@ -38,5 +43,8 @@
     ],
     "cs-check": "phpcs",
     "cs-fix": "phpcbf"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "9.0"
   }
 }

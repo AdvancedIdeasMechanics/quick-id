@@ -3,7 +3,7 @@ namespace Advancedideasmechanics\Quickid;
 
 class QuickidService implements QuickidServiceInterface {
 
-    public function getId($length = 3)
+    public function getId($length)
     {
         /*
          * $length tells how long the new shortened URL will be
@@ -12,13 +12,9 @@ class QuickidService implements QuickidServiceInterface {
          * Length of 4 character can generate 4,776,336 unique
          * 62*62*62 = 238,328
          */
-        if(is_numeric($length)) {
-            if ($length < 3 ) {
-                $length = 3;
-            }
+        $length = isset($length) && (int)$length > 3 ? $length : 3;
 
             $start = 0;
-            $length = $length;
 
             $lowerCase = 'abcdefghijklmnopqrstuvwxyz';
             $upperCase = strtoupper($lowerCase);
@@ -33,5 +29,4 @@ class QuickidService implements QuickidServiceInterface {
 
             return implode($returnRandom);
         }
-    }
 }

@@ -1,0 +1,7 @@
+<phpunit xmlns="$LOCAL_SCHEMA$" bootstrap="tests/autoload.php">
+    <testsuites>
+        <testsuite name="Quickid">
+            <directory suffix="Test.php">tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
